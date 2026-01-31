@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: Inter, sans-serif;
+  color: var(--text-main);
+}
+
+.carousel {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 40px 16px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.35s ease;
+}
+
+.coupon {
+  min-width: 100%;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px 24px 32px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.coupon-header {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.coupon-body h1 {
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  margin: 40px 0 16px;
+}
+
+.coupon-body p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.coupon-button {
+  margin-top: 40px;
+  background: none;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+}
