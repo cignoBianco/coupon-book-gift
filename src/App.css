@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background: var(--bg);
-  font-family: Inter, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  font-family: 'Poppins', sans-serif;
   color: var(--text-main);
 }
 
@@ -32,49 +32,126 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.coupon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.2),
+    rgba(255,255,255,0.2) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .coupon-header {
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
-  color: var(--text-muted);
+  /* color: var(--text-muted); */
+  color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .coupon-body h1 {
-  font-size: 26px;
-  letter-spacing: 0.02em;
-  margin: 40px 0 16px;
+  /* font-size: 26px; */
+  /* letter-spacing: 0.02em; */
+  /* margin: 40px 0 16px; */
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: "Seymour One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 36px;
+  margin: 30px 0 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  line-height: 1.2;
 }
 
 .coupon-body p {
-  font-size: 15px;
+  /* font-size: 15px;
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.6; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  font-weight: 300;
 }
 
 .coupon-button {
-  margin-top: 40px;
+  /* margin-top: 40px;
   background: none;
   border: 1px solid var(--accent);
   color: var(--accent);
   padding: 14px;
   border-radius: 12px;
   font-size: 14px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.12em; */
+  margin-top: 30px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.coupon-button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
 }
 
 .coupon-confirm {
   display: flex;
   gap: 12px;
   margin-top: 40px;
+  gap: 15px;
+  margin-top: 30px;
 }
 
 .coupon-confirm button {
   flex: 1;
+  color: var(--accent);
   padding: 14px;
   border-radius: 12px;
   border: 1px solid var(--accent);
   background: none;
   font-size: 14px;
+  flex: 1;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-family: "Hachi Maru Pop", cursive;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .coupon--used {
@@ -83,7 +160,8 @@ body {
 
 .coupon--used h1,
 .coupon--used p {
-  color: var(--text-muted);
+  /* color: var(--text-muted); */
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .coupon-button:disabled {
@@ -100,12 +178,27 @@ body {
 }
 
 .dot {
-  width: 4px;
-  height: 4px;
+  width: 6px;
+  height: 3px;
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.2);
 }
 
 .dot--active {
   background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.coupon {
+  animation: fadeIn 0.5s ease forwards;
 }

@@ -48,6 +48,7 @@ export function CouponCarousel() {
                 {coupons.map((c, i) => (
                     <CouponCard
                         key={c.id}
+                        id={c.id}
                         index={i}
                         total={coupons.length}
                         title={c.title}
