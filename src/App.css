@@ -21,13 +21,13 @@ body {
   overflow: hidden;
   padding: 30px 20px;
 
-  touch-action: pan-x; /* Разрешаем только горизонтальный свайп */
-  -webkit-touch-action: pan-x; /* Для старых Safari */
+  touch-action: pan-x;
+  -webkit-touch-action: pan-x;
 }
 
 .carousel-track {
   display: grid;
-  grid-template-columns: repeat(41, calc(100vw - 40px));
+  grid-template-columns: repeat(42, calc(100vw - 40px));
   column-gap: 20px;
   transition: transform 0.35s ease;
   min-width: max-content;
