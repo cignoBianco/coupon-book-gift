@@ -1,3 +1,8 @@
+html,
+body {
+  overflow-y: hidden;
+}
+
 body {
   margin: 0;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
@@ -20,6 +25,7 @@ body {
   column-gap: 20px;
   transition: transform 0.35s ease;
   min-width: max-content;
+  overflow-y: hidden;
 }
 
 .coupon {
