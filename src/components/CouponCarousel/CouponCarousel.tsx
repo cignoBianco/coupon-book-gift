@@ -28,6 +28,8 @@ export function CouponCarousel() {
         const diff = startX.current - e.changedTouches[0].clientX;
         if (diff > 50 && current < coupons.length - 1) {
             vibrate(6);
+            const audio = new Audio('https://codeskulptor-demos.commondatastorage.googleapis.com/pang/pop.mp3');
+            audio.play().catch(() => console.log('Звук не воспроизведён: пользователь не взаимодействовал'));
             setCurrent(c => c + 1);
         }
         if (diff < -50 && current > 0) {
