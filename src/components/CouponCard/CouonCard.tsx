@@ -48,13 +48,20 @@ const CouponCard = ({
             className={`coupon ${isUsed ? 'coupon--used' : ''}`}
             style={cardStyle}
         >
+            <div className="coupon-decoration">
+                <div className="corner top-left"></div>
+                <div className="corner top-right"></div>
+                <div className="corner bottom-left"></div>
+                <div className="corner bottom-right"></div>
+            </div>
+
             <div className="coupon-header">
                 <span>{String(index + 1).padStart(2, '0')} / {total}</span>
             </div>
 
             <div className="coupon-body">
                 <h1>{title}</h1>
-                <p>
+                <p className="coupon-description">
                     {subtitle.split('\n').map((line, i) => (
                         <span key={i}>{line}<br /></span>
                     ))}

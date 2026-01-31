@@ -39,9 +39,11 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
   border: 1px solid rgba(255,255,255,0.3);
+
+  overflow: hidden;
 }
 
-.coupon:before {
+.coupon::before {
   content: '';
   position: absolute;
   top: 0;
@@ -50,11 +52,12 @@ body {
   height: 10px;
   background: repeating-linear-gradient(
     90deg,
-    rgba(255,255,255,0.2),
-    rgba(255,255,255,0.2) 1px,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.15) 1px,
     transparent 1px,
-    transparent 8px
+    transparent 10px
   );
+  z-index: 2;
 }
 
 .coupon-header {
